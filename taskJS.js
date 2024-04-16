@@ -30,7 +30,7 @@ function findNeedle(haystack) {
   if(!haystack.length)return;
 const superItem =  "needle";
 let resultPosition = 0;
-haystack.forEach((item, i) => {
+haystack.map((item, i) => {
   if(item !== superItem) return;
   resultPosition = i;
 });

@@ -1,90 +1,33 @@
-// Change code below this line
-class MyComponent extends React.Component {
-  constructor(props){
-    super(props);
-  }
-render(){
-
-  return(
-    <h1>My First React Component!</h1>
-  )
-}
-}
-
-ReactDOM.render(<MyComponent />, document.querySelector('#challenge-node'));
-
-//Example with prop-types, default props, and mix with class and fucn Component
-
-class CampSite extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        <Camper name={this.props.name}/>
-      </div>
-    );
-  }
-};
-// Change code below this line
-
-const Camper = (props) => {
-  return <p>{props.name}</p>
-};
-
-Camper.defaultProps = {
-  name: 'CamperBot',
-};
-
-
-class MyComponent extends React.Component {
+class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Initial State'
+      count: 0
     };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
     // Change code below this line
-    this.setState({
-      name: 'React Rocks!'
-    })
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
+    this.reset = this.reset.bind(this);
     // Change code above this line
   }
+  // Change code below this line
+  increment() {
+    this.setState(state => ({count : state.count + 1}));
+  }
+  decrement() {
+    this.setState(state => ({count : state.count - 1}));
+  }
+  reset() {
+    this.setState(state => ({count: 0}));
+  }
+  // Change code above this line
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Click Me</button>
-        <h1>{this.state.name}</h1>
-      </div>
-    );
-  }
-};
-
-class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: "Hello"
-    };
-    // Change code below this line
-
-    // Change code above this line
-  }
-  handleClick() {
-    this.setState({
-      text: "You clicked!"
-    });
-  }
-  render() {
-    return (
-      <div>
-        { /* Change code below this line */ }
-        <button onClick={this.handleClick.bind(this)}>Click Me</button>
-        { /* Change code above this line */ }
-        <h1>{this.state.text}</h1>
+        <button className='inc' onClick={this.increment}>Increment!</button>
+        <button className='dec' onClick={this.decrement}>Decrement!</button>
+        <button className='reset' onClick={this.reset}>Reset</button>
+        <h1>Current Count: {this.state.count}</h1>
       </div>
     );
   }
