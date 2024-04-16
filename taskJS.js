@@ -21,10 +21,23 @@ function makeNegative(num) {
   return num * -1;
 }
 
-console.log(makeNegative(1));    // return -1
-console.log(makeNegative(-5));   // return -5
-console.log(makeNegative(0));    // return 0
-console.log(makeNegative(0.12)); // return -0.12
+// console.log(makeNegative(1));    // return -1
+// console.log(makeNegative(-5));   // return -5
+// console.log(makeNegative(0));    // return 0
+// console.log(makeNegative(0.12)); // return -0.12
+
+function findNeedle(haystack) {
+  if(!haystack.length)return;
+const superItem =  "needle";
+let resultPosition = 0;
+haystack.forEach((item, i) => {
+  if(item !== superItem) return;
+  resultPosition = i;
+});
+return `found the needle at position ${resultPosition}`
+}
+
+console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
 
 
 
