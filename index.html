@@ -9,9 +9,11 @@
 <body>
   <h1>Learn Kata in Codewars for IT Incubator</h1>
   <h1>CatPhotoApp</h1>
-  <label><input id="indoor" type="radio" name='indoor-outdoor'> Indoor</label>
-  <label><input id="outdoor" type="radio" name='indoor-outdoor'> Outdoor</label>
-  <label><input id="outdoor" type="radio" name='indoor-outdoor'> Outdoor</label>
+  <fieldset>
+    <legend>Is your cat an indoor or outdoor cat?</legend>
+    <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+    <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+  </fieldset>
   <script src="./taskJS.js"></script>
 </body>
 </html>
