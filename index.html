@@ -5,6 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script>
+    // const p1 = new Promise((resolve, reject) => {
+    //     throw new Error('Uh-oh!');
+    // });
+    // const p2 = new Promise((resolve, reject) => {
+    //     resolve("p2 ok");
+    // });
+    
+    // Promise.allSettled([p1, p2]).catch((error) => {
+    //     console.log('My errer' + error);
+    // }).then((result) => {
+    //   console.log(result);
+    //     console.log(result[1].status);
+    // });
+
+    try{
+	if(console.log(1)){
+		console.log(2)
+	} else {
+	throw new Error()
+	}
+}catch{
+	console.log(console.log(3))
+}
+    </script>
 </head>
 <body>
   <h1>Learn Kata in Codewars for IT Incubator</h1>
